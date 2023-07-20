@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .rotate{
+            background-color: red;
+            transition: 0.70s;
+            -webkit-transition: 0.70s;
+            -moz-transition: 0.70s;
+            -ms-transition: 0.70s;
+            -o-transition: 0.70s;
+            width: 250px;
+            height: 150px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .rotate:hover {
+            transition: 0.70s;
+            -webkit-transition: 0.70s;
+            -moz-transition: 0.70s;
+            -ms-transition: 0.70s;
+            -o-transition: 0.70s;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        } 
+        .width {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        .width:hover {
+            width: 300px;
+        }
+        .squarerotate{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: Demo;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes Demo {
+            0%{background-color: red; left: 0px; top: 0px; transform: rotate(0deg);}   
+            25%{background-color: yellow; left: 200px; top: 0px; transform: rotate(90deg);}
+            50%{background-color: blue; left: 200px; top: 200px; transform: rotate(180deg);}
+            75%{background-color: green; left: 0px; top: 200px; transform: rotate(270deg);}
+            100%{background-color: red; left: 0px; top: 0px; transform: rotate(360deg);}
+        }
+        .flip{
+            background-color: red;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        .flip:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate">
+        Rotating
+    </div>
+    <div class="width">
+        Increasing Width
+    </div>
+    <br>
+    <br>
+    <div class="flip">
+        Flipping
+    </div>
+    <br>
+    <br>
+    <div class="squarerotate">
+        Changing Position
+    </div>
+    
+</body>
+</html>
